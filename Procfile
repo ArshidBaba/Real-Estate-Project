@@ -1,1 +1,1 @@
-web: gunicorn btre.wsgi --log-file -
+web: python manage.py collectstatic --noinput; gunicorn btre.wsgi --log-file -
