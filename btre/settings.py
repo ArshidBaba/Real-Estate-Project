@@ -140,8 +140,8 @@ STATIC_URL = 'http://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'btre/static')
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-# STATICFILES_STORAGE = "myproject.s3utils.StaticS3BotoStorage"
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = "btre.s3utils.StaticS3BotoStorage"
 
 # Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
